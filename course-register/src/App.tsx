@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const SCRIPT_URL =
@@ -13,7 +13,7 @@ export default function LeadCaptureForm() {
   const [loading, setLoading] = useState(false);
   const [declined, setDeclined] = useState(false);
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: <HTMLFormElement>) {
     e.preventDefault();
 
     if (!email.trim()) {
