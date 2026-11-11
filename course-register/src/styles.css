@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #102c25;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  padding: 55px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+      circle at 5% 10%,
+      rgba(16, 185, 129, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(circle at 95% 90%, rgba(16, 185, 129, 0.1), transparent 30%),
+    #effaf4;
+}
+
+.background-decoration {
+  position: absolute;
+  border: 1px solid rgba(5, 150, 105, 0.09);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 450px;
+  height: 450px;
+  top: -240px;
+  right: -180px;
+}
+
+.decoration-two {
+  width: 350px;
+  height: 350px;
+  bottom: -220px;
+  left: -150px;
+}
+
+.form-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 510px;
+  background: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 24px 65px rgba(15, 76, 52, 0.1),
+    0 5px 15px rgba(15, 76, 52, 0.04);
+}
+
+.brand-header {
+  padding: 32px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.brand-name {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #102f27;
+}
+
+.brand-tagline {
+  margin-top: 7px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #84978e;
+}
+
+.brand-tagline span {
+  color: #07976b;
+  padding: 0 3px;
+}
+
+.form-content {
+  padding: 22px 36px 38px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #059669;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  margin-bottom: 16px;
+}
+
+.eyebrow-line {
+  height: 1px;
+  width: 27px;
+  background: #b5e5d0;
+}
+
+.form-content h1 {
+  margin: 0;
+  color: #102c25;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.description {
+  max-width: 390px;
+  margin: 13px auto 30px;
+  color: #718078;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+form {
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #193d31;
+}
+
+form input {
+  width: 100%;
+  height: 54px;
+  padding: 0 17px;
+  border: 1px solid #e2ebe6;
+  border-radius: 10px;
+  outline: none;
+  background: #f5f8f7;
+  color: #193d31;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+form input::placeholder {
+  color: #a1afa8;
+}
+
+form input:focus {
+  background: #ffffff;
+  border-color: #07976b;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.09);
+}
+
+form input:disabled {
+  opacity: 0.7;
+}
+
+.question {
+  text-align: center;
+  margin: 29px 0 16px;
+  color: #254537;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.button {
+  height: 53px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #079b70, #087c59);
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(5, 150, 105, 0.15);
+}
+
+.button-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #07865f, #066b4d);
+  box-shadow: 0 8px 18px rgba(5, 150, 105, 0.23);
+}
+
+.button-secondary {
+  background: #f0f5f2;
+  color: #355347;
+}
+
+.button-secondary:hover:not(:disabled) {
+  background: #e5eee9;
+}
+
+.status-message {
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.status-message.success {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #bbf7d0;
+}
+
+.status-message.error {
+  background: #fff1f2;
+  color: #dc2626;
+  border: 1px solid #fecdd3;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thank-you {
+  padding: 15px 0;
+}
+
+.thank-you-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9f9f1;
+  color: #059669;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.back-button {
+  width: 100%;
+}
+
+.form-footer {
+  padding: 25px 20px 22px;
+  background: #f8fbf9;
+  border-top: 1px solid #edf3ef;
+  text-align: center;
+}
+
+.footer-heading {
+  color: #94a69d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 17px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #718b7d;
+  font-size: 11px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #059669;
+}
+
+.footer-dot {
+  color: #a7c6b7;
+  font-size: 10px;
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #a2b0a8;
+  font-size: 9px;
+}
+
+.page-caption {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  color: #82998d;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.page-caption span {
+  color: #059669;
+  padding: 0 5px;
+}
+
+@media (max-width: 520px) {
+  .page-wrapper {
+    padding: 20px 14px;
+  }
+
+  .form-card {
+    border-radius: 18px;
+  }
+
+  .brand-header {
+    padding-top: 25px;
+  }
+
+  .form-content {
+    padding: 18px 22px 30px;
+  }
+
+  .form-content h1 {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .button-group {
+    gap: 9px;
+  }
+
+  .button {
+    font-size: 12px;
+  }
+}
