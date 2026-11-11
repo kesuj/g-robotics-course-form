@@ -13,7 +13,7 @@ export default function LeadCaptureForm() {
   const [loading, setLoading] = useState(false);
   const [declined, setDeclined] = useState(false);
 
-  async function handleSubmit(e: <HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     if (!email.trim()) {
